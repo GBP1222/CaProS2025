@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="index.html" class="link-btn"><div>Pagina principala</div></a>
+            <a href="#" class="link-btn"><div>Github</div></a>
+        </div>
+    </header>
+    <div class="wrappers">
+
+    <div class="help-form">
+        <h1>Formular de contact</h1>
+        <form method="POST"  onsubmit="sendFeedback(event)">
+            <input type="text" name="name" placeholder="Nume" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Mesaj sau Sugestie" rows="6" required></textarea>
+
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+        <h3>Sociale</h3>
+  
+    <!-- GitHub -->
+    <a href="https://github.com/yourusername" class="social-link" target="_blank">
+      <i class="fa fa-github"></i>
+      GitHub
+    </a>
+  
+    <!-- Twitter/X -->
+    <a href="https://twitter.com/yourhandle" class="social-link" target="_blank">
+      <i class="fa fa-twitter"></i>
+      Twitter
+    </a>
+  
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank">
+      <i class="fa fa-linkedin"></i>
+      LinkedIn
+    </a>
+  
+    <!-- Email -->
+    <a href="mailto:you@example.com" class="social-link">
+      <i class="fa fa-envelope"></i>
+      Email
+    </a>
+  
+    </div>
+    <div class="b-sidew">
+    <div class="review"  onsubmit="sendReview(event)">
+
+        <form class="cedez">
+            <h3>Rate</h3>
+        <fieldset class="rating review-form" id="FeedbackForm">
+            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+        </fieldset>
+        <input type="submit" class="submit-rating"></input>
+    </form>
+    </div>
+    <div class="image-slideshow"> 
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+        <img class="mySlides" src="/dist/images/a.jpg" style="display: block;">
+        <img class="mySlides" src="/dist/images/b.jpg" style="display: none;">
+        <img class="mySlides" src="/dist/images/c.jpg" style="display: none;">
+        <img class="mySlides" src="/dist/images/d.jpg" style="display: none;">
+
+    </div>
+    </div>
+    </div>  
+</body>
+</html>

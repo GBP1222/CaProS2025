@@ -1,0 +1,152 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+img{
+  width: 25rem;
+  height: auto;
+}
+.review-form{
+    align-items: center;
+    display: inline;
+}
+
+.cedez{
+    top: 20%;
+    display: inline;
+    position: relative;
+}
+.help-form{
+    width: 50%;
+    padding: 2em 5em;
+    background-color: #474E68;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.contact{
+    width: 25%;
+}
+
+.b-sidew{
+    display: flex;
+    padding: 2em 5em;
+    background-color: #474E68;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.b-sidew > form {
+    align-items: center;
+}
+
+.image-slideshow{
+    flex:1;
+}
+
+.image-slideshow:nth-child(3){
+  display: block;
+}
+
+.mySlides {display:none;}
+
+.review{
+    width: 70%;
+    flex: 1;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.wrappers{
+    display: flex;
+    padding-top: 80px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-list {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-bottom: 1px solid #4a4d69;
+  }
+  
+  .contact-list h3 {
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 8px 0;
+    color: #f0f0f0;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+  }
+  
+  .social-link i {
+    width: 25px;
+    margin-right: 10px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  
+  /* Specific platform colors */
+  .social-link[href*="github.com"] { color: #f0f0f0; }
+  .social-link[href*="twitter.com"] { color: #1DA1F2; }
+  .social-link[href*="linkedin.com"] { color: #0A66C2; }
+  .social-link[href^="mailto:"] { color: #EA4335; }
+
+fieldset, label { margin: 0; padding: 0; }
+
+.rating { 
+  border: none;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
