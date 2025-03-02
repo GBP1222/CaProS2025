@@ -1,4 +1,4 @@
-//global variables
+//variabile globale
 var monthEl = $(".c-main");
 var dataCel = $(".c-cal__cel");
 var dateObj = new Date();
@@ -29,7 +29,7 @@ var inputDate = $(this).data();
 today = year + "-" + month + "-" + day;
 
 
-// ------ set default events -------
+// ------ evenimente default -------
 function defaultEvents(dataDay,dataName,dataNotes,classTag){
   var date = $('*[data-day='+dataDay+']');
   date.attr("data-name", dataName);
@@ -55,33 +55,22 @@ defaultEvents('2025-04-14', 'Olimpiada de Informatică (gimnaziu) Etapa Naționa
 defaultEvents('2025-04-15', 'Olimpiada de Istorie (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-04-17', 'Olimpiada de Limba Italiană (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-04-18', 'Olimpiada de Limba Spaniolă (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-19', 'Olimpiada de Limba Rusă Modernă (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-20', 'Olimpiada de Limba Germană Modernă (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-21', 'Olimpiada de Limba Maghiară Maternă (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-22', 'Olimpiada de Geografie (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-22', 'Olimpiada de Chimie (clasele VII-XII) Etapa Națională', '', 'important');
 defaultEvents('2025-04-22', 'Olimpiada de Limba Franceză (clasele VII-XII) Etapa Națională', '', 'important');
 defaultEvents('2025-04-23', 'Olimpiada de Chimie (clasele VII-XII) Etapa Națională', '', 'important');
 defaultEvents('2025-04-24', 'Olimpiada de Limba Engleză (clasele VII-XII) Etapa Națională', '', 'important');
-defaultEvents('2025-04-25', 'Olimpiada de Limba și Literatura Rromani (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-04-26', 'Olimpiada de Religie (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-27', 'Olimpiada de Arte Vizuale, Arhitectură și Istoria Artelor (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-04-28', 'Olimpiada de Muzică (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-04-29', 'Olimpiada de Tehnologii (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-04-30', 'Olimpiada de Educație Tehnologică și Aplicații Practice (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-01', 'Olimpiada de Educație Fizică și Sport (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-02', 'Olimpiada de Pedagogie-Psihologie (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-03', 'Olimpiada de Științe Socio-Umane (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-04', 'Olimpiada de Economie (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-05', 'Olimpiada de Logică, Argumentare și Comunicare (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-05-06', 'Olimpiada de Astronomie și Astrofizică (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-07', 'Olimpiada de Științe pentru Juniori (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-05-08', 'Olimpiada de Științe ale Pământului (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-09', 'Olimpiada de Lectură ca Abilitate de Viață (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-10', 'Olimpiada de Creativitate Științifică (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-11', 'Olimpiada de Inovare și Creație Digitală - InfoEducație (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-12', 'Olimpiada de Informatică Aplicată - AcadNet (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-05-13', 'Olimpiada de Meșteșuguri Artistice Tradiționale (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-14', 'Olimpiada de Arta Actorului (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-15', 'Olimpiada de Limba Latină (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-16', 'Olimpiada de Limba Greacă Veche (Toate Clasele) Etapa Națională', '', 'important');
@@ -90,7 +79,6 @@ defaultEvents('2025-05-18', 'Olimpiada de Limba Sârbă Maternă (Toate Clasele)
 defaultEvents('2025-05-19', 'Olimpiada de Limba Slovacă Maternă (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-20', 'Olimpiada de Limba Cehă Maternă (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-21', 'Olimpiada de Limba Bulgară Maternă (Toate Clasele) Etapa Națională', '', 'important');
-defaultEvents('2025-05-22', 'Olimpiada de Limba Ucraineană Maternă (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-23', 'Olimpiada de Limba Turcă Maternă (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-24', 'Olimpiada de Limba Tătară Maternă (Toate Clasele) Etapa Națională', '', 'important');
 defaultEvents('2025-05-25', 'Olimpiada de Limba Polonă Maternă (Toate Clasele) Etapa Națională', '', 'important');
@@ -118,9 +106,8 @@ defaultEvents('2025-06-10', 'Concursul Național de Limba Engleză "Shakespeare 
 defaultEvents('2025-06-15', 'Concursul Național de Limba Franceză "Pierre de Ronsard" (Toate Clasele) Etapa Națională', '', 'festivity');
 
 
-// ------ functions control -------
+// ------ functie de control -------
 
-//button of the current day
 todayBtn.on("click", function() {
   if (month < indexMonth) {
     var step = indexMonth % month;
@@ -131,7 +118,6 @@ todayBtn.on("click", function() {
   }
 });
 
-//higlight the cel of current day
 dataCel.each(function() {
   if ($(this).data("day") === today) {
     $(this).addClass("isToday");
@@ -139,7 +125,6 @@ dataCel.each(function() {
   }
 });
 
-//window event creator
 addBtn.on("click", function() {
   winCreator.addClass("isVisible");
   $("body").addClass("overlay");
@@ -185,7 +170,7 @@ saveBtn.on("click", function() {
   $("#addEvent")[0].reset();
 });
 
-//fill sidebar event info
+// informatia din sidebar
 function fillEventSidebar(self) {
   $(".c-aside__event").remove();
   var thisName = self.attr("data-name");
@@ -253,7 +238,7 @@ dataCel.on("click", function() {
 
 });
 
-//function for move the months
+//functia care muta lunile
 function moveNext(fakeClick, indexNext) {
   for (var i = 0; i < fakeClick; i++) {
     $(".c-main").css({
@@ -285,7 +270,7 @@ function movePrev(fakeClick, indexPrev) {
   }
 }
 
-//months paginator
+//paginator de luni
 function buttonsPaginator(buttonId, mainClass, monthClass, next, prev) {
   switch (true) {
     case next:
@@ -319,7 +304,7 @@ function buttonsPaginator(buttonId, mainClass, monthClass, next, prev) {
   }
 }
 
-// Global variables update
+// updateaza variabile globale
 var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 var favoriteBtn = $("#favoriteBtn");
 favoriteBtn.on('click', function() {
@@ -357,7 +342,7 @@ function updateFavoriteButtonState(date) {
 }
 
 
-// Modified favorites list update
+// lista de favorite
 function updateFavoritesList() {
   const favorites = getFavorites();
   $('.favorites-list').empty();
@@ -382,7 +367,7 @@ function updateFavoritesList() {
             ${fav.notes ? `<span class="favorite-notes">• ${fav.notes}</span>` : ''}
           </div>
           <div>
-            <span class="days-until">${showTilde ? '~' : ''}${diffDays} days</span>
+            <span class="days-until">${showTilde ? '~' : ''}${diffDays} zile</span>
             <button class="remove-favorite" data-date="${fav.date}">×</button>
           </div>
         </div>
@@ -392,7 +377,7 @@ function updateFavoritesList() {
 }
 
 
-// Handle remove button clicks
+// stergerea favoritelor
 $('.favorites-list').on('click', '.remove-favorite', function() {
   const date = $(this).data('date');
   let favorites = getFavorites();
@@ -402,7 +387,7 @@ $('.favorites-list').on('click', '.remove-favorite', function() {
   updateFavoriteButtonState(date);
 });
 
-// Update favorite button text when date is selected
+// updateaza favorite
 dataCel.on("click", function() {
   const date = $(this).data('day');
   const hasEvent = $(this).attr('data-name') !== undefined;
@@ -410,7 +395,6 @@ dataCel.on("click", function() {
   favoriteBtn.prop('disabled', !hasEvent);
   updateFavoriteButtonState(date);
 
-  // Existing calendar UI updates
   const thisDay = $(this).attr("data-day").slice(8);
   const thisMonth = $(this).attr("data-day").slice(5, 7);
   fillEventSidebar($(this));
@@ -423,7 +407,7 @@ dataCel.on("click", function() {
 let currentUser = null;
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
-// Auth UI elements
+// elemente UI
 const hamburgerBtn = $('.hamburger-btn');
 const authDropdown = $('.auth-dropdown');
 const authModal = $('.auth-modal');
@@ -455,7 +439,7 @@ function saveFavorites(favorites) {
 }
 
 
-// Toggle auth dropdown
+// droptown de autorizare
 hamburgerBtn.on('click', () => authDropdown.toggleClass('show'));
 hamburgerBtnClose.on('click', () => authDropdown.toggleClass('show'));
 
@@ -476,10 +460,10 @@ $('#registerBtn').on('click', () => {
   authDropdown.removeClass('show');
 });
 
-// Close modal
+// inchide modalul
 closeButn.on('click', () => authModal.hide());
 
-// Auth form submission
+// auth
 authForm.on('submit', (e) => {
   e.preventDefault();
   const username = $('#username').val();
@@ -492,7 +476,6 @@ authForm.on('submit', (e) => {
       sessionStorage.setItem('currentUser', username);
       authModal.hide();
       
-      // Directly load user's favorites without merging
       updateFavoritesList();
       updateAuthUI();
     } else {
@@ -512,7 +495,6 @@ authForm.on('submit', (e) => {
   }
 });
 
-// Update UI based on auth status
 function updateAuthUI() {
   if (currentUser) {
     $('#loginBtn, #registerBtn').hide();
@@ -522,13 +504,12 @@ function updateAuthUI() {
   } else {
     $('#loginBtn, #registerBtn').show();
     $('#logoutBtn').hide();
-    hamburgerBtn.html('<i class="fa fa-bars"></i> Meniu');
+    hamburgerBtn.html('<i class="fa fa-bars"></i> <a>MENU</a>');
   }
 }
 
-// Modify the logout function to clear guest favorites if desired
 function logout() {
-  // Optional: Uncomment next line if you want to clear guest favorites on logout
+  // Optional: decomenteaza daca vrei ca atributele profilului guest sa fie sterse la logout
   //localStorage.removeItem('guestFavorites');
   currentUser = null;
   sessionStorage.removeItem('currentUser');
@@ -546,7 +527,7 @@ async function sendContact(ev) {
 
   const webhookBody = {
     embeds: [{
-      title: 'Contact Form Submitted',
+      title: 'Suggest Form',
       fields: [
         { name: 'Link', value: senderDate },
         { name: 'Data', value: senderMessage }
@@ -563,10 +544,38 @@ async function sendContact(ev) {
     },
     body: JSON.stringify(webhookBody),
   });
+}
 
-  if(response.ok)
-    alert("mesaj trimis");
-  else alert("eroare");
+function setThemeDark() {
+  document.documentElement.classList.remove('light-theme');
+  document.documentElement.classList.add('dark-theme');
+  document.documentElement.style.setProperty('--dark1', '#404258');
+  document.documentElement.style.setProperty('--dark2', '#474E68');
+  document.documentElement.style.setProperty('--dark3', '#50577A');
+  document.documentElement.style.setProperty('--dark4', '#4554a1');
+  document.documentElement.style.setProperty('--dark5', '#4a65ec');
+  document.documentElement.style.setProperty('--dark6', '#49517a');
+  document.documentElement.style.setProperty('--light1', '#E3FDFD');
+  document.documentElement.style.setProperty('--light2', '#CBF1F5');
+  localStorage.setItem('theme', 'dark');
+}
+
+function setThemeLight() {
+  document.documentElement.classList.remove('dark-theme');
+  document.documentElement.classList.add('light-theme');
+  document.documentElement.style.setProperty('--dark1', '#E3FDFD');
+  document.documentElement.style.setProperty('--dark2', '#CBF1F5');
+  document.documentElement.style.setProperty('--dark3', '#A6E3E9');
+  document.documentElement.style.setProperty('--dark4', '#71C9CE');
+  document.documentElement.style.setProperty('--dark5', '#d6c89f');
+  document.documentElement.style.setProperty('--dark6', '#8ac4c7');
+  document.documentElement.style.setProperty('--light1', '#404258');
+  document.documentElement.style.setProperty('--light2', '#474E68');
+  //document.documentElement.style.setProperty('--light3', '#50577A');
+  //document.documentElement.style.setProperty('--light4', '#4554a1');
+  //document.documentElement.style.setProperty('--light5', '#4a65ec');
+ // document.documentElement.style.setProperty('--light6', '#49517a');
+  localStorage.setItem('theme', 'light');
 }
 
 currentUser = sessionStorage.getItem('currentUser');
@@ -575,11 +584,17 @@ updateAuthUI();
 buttonsPaginator("#next", monthEl, ".c-paginator__month", false, true);
 buttonsPaginator("#prev", monthEl, ".c-paginator__month", true, false);
 
-//launch function to set the current month
+//launch
 moveNext(indexMonth - 1, false);
 
-//fill the sidebar with current day
+//sidebar
 $(".c-aside__num").text(day);
 $(".c-aside__month").text(monthText[month - 1]);
 
 updateFavoritesList();
+
+$(document).ready(function() {
+  initTheme();
+});
+
+// 600 de linii =OOOO

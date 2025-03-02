@@ -5,14 +5,14 @@ async function sendReview(ev) {
 
   const webhookBody = {
     embeds: [{
-      title: 'Contact Form Submitted',
+      title: 'Review Form',
       fields: [
         { name: 'Review', value: ratingValue }
       ]
     }],
   };
 
-  const webhookUrl = 'https://discord.com/api/webhooks/1343850983582597222/cGo3SHn42fFqdEhPpGsboxp7HnEuZVnOhEPWe9g3PYFUGC3klf4nS9O8FoIZ8NHDIJ_3';
+  const webhookUrl = 'https://discord.com/api/webhooks/1345843188736331808/srSkQv1wXfsTjClELeZvqreQuimXSHNPqTFM0VPn7hBo4sYyp_Atmm3Xt5W734Hgboar';
 
   const response = await fetch(webhookUrl, {
     method: 'POST',
@@ -21,31 +21,31 @@ async function sendReview(ev) {
     },
     body: JSON.stringify(webhookBody),
   });
-
-  if(response.ok){
-    alert("trimis");
-  }else alert("eroare");
 }
 
 async function sendFeedback(ev) {
   ev.preventDefault();
-  const senderMessage = document
-    .getElementById('messageInput').value;
+  const contactName = document
+    .getElementById('contactNameInput').value;
 
-  const senderDate = document
-    .getElementById('link-input').value;
+  const contactMail = document
+    .getElementById('contactMailInput').value;
+
+  const contactMessage = document
+    .getElementById('contactMessageInput').value;
 
   const webhookBody = {
     embeds: [{
-      title: 'Contact Form Submitted',
+      title: 'Feedback Form',
       fields: [
-        { name: 'Link', value: senderDate },
-        { name: 'Data', value: senderMessage }
+        { name: 'Nume', value: contactName },
+        { name: 'Mail', value: contactMail },
+        { name: 'Message', value: contactMessage }
       ]
     }],
   };
 
-  const webhookUrl = 'https://discord.com/api/webhooks/1343850983582597222/cGo3SHn42fFqdEhPpGsboxp7HnEuZVnOhEPWe9g3PYFUGC3klf4nS9O8FoIZ8NHDIJ_3';
+  const webhookUrl = 'https://discord.com/api/webhooks/1345843406248869970/QgT7PWN4drhH9C_mFr1P1WY3orwH5-Sgg8KxY-Ffl5dI1trM00ALauLM_tFzoweOOIF3';
 
   const response = await fetch(webhookUrl, {
     method: 'POST',
@@ -54,10 +54,6 @@ async function sendFeedback(ev) {
     },
     body: JSON.stringify(webhookBody),
   });
-
-  if(response.ok)
-    alert("mesaj trimis");
-  else alert("eroare");
 }
 
 var slideIndex = 1;

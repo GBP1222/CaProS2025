@@ -16,14 +16,14 @@
             <a href="#" class="link-btn"><div>Github</div></a>
         </div>
     </header>
-    <div class="wrappers">
+    <div class="wrapper wrappers">
 
-    <div class="help-form">
+    <div class="help-form c-calendar__style">
         <h1>Formular de contact</h1>
         <form method="POST"  onsubmit="sendFeedback(event)">
-            <input type="text" name="name" placeholder="Nume" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Mesaj sau Sugestie" rows="6" required></textarea>
+            <input type="text" name="name" placeholder="Nume" id="contactNameInput" required>
+            <input type="email" name="email" placeholder="Email" id="contactMailInput" required>
+            <textarea name="message" placeholder="Mesaj sau Sugestie" rows="6" id="contactMessageInput" required></textarea>
 
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -56,7 +56,7 @@
     </a>
   
     </div>
-    <div class="b-sidew">
+    <div class="b-sidew c-calendar__style">
     <div class="review"  onsubmit="sendReview(event)">
 
         <form class="cedez">

@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>MOR</title>
+  <title>Calendar Evenimente</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
@@ -10,29 +10,27 @@
 <body>
 <!-- partial:index.partial.html -->
 <script>
-  // fill the month table with column headings
+  // scrie numele zilelor
 function day_title(day_name) {
     document.write("<div class='c-cal__col'>" + day_name + "</div>");
   }
-  // fills the month table with numbers
+  // umple lunile cu numere
 function fill_table(month, month_length, indexMonth) {
     day = 1;
-    // begin the new month table
+    // incepe noua luna
     document.write("<div class='c-main c-main-" + indexMonth + "'>");
     //document.write("<b>"+month+" "+year+"</b>")
 
-    // column headings
     document.write("<div class='c-cal__row'>");
-    day_title("Mon");
-    day_title("Tue");
-    day_title("Wed");
-    day_title("Thu");
-    day_title("Fri");
-    day_title("Sat");
-    day_title("Sun");
+    day_title("Lun");
+    day_title("Mar");
+    day_title("Mie");
+    day_title("Joi");
+    day_title("Vin");
+    day_title("Sam");
+    day_title("Dum");
     document.write("</div>");
 
-    // pad cells before first day of month
     document.write("<div class='c-cal__row'>");
     for (var i = 1; i < start_day; i++) {
       if (start_day > 7) {
@@ -41,7 +39,7 @@ function fill_table(month, month_length, indexMonth) {
       }
     }
 
-    // fill the first week of days
+    // umple primele zile din saptamana
     for (var i = start_day; i < 8; i++) {
       document.write(
         "<div data-day='2025-" +
@@ -56,7 +54,7 @@ function fill_table(month, month_length, indexMonth) {
     }
     document.write("</div>");
 
-    // fill the remaining weeks
+    // umple saptamanile ramase
     while (day <= month_length) {
       document.write("<div class='c-cal__row'>");
       for (var i = 1; i <= 7 && day <= month_length; i++) {
@@ -85,7 +83,7 @@ function fill_table(month, month_length, indexMonth) {
         }
       }
       document.write("</div>");
-      // the first day of the next month
+      // prima zi din luna
       start_day = i;
     }
 
@@ -98,7 +96,7 @@ function fill_table(month, month_length, indexMonth) {
   <div class="wrapper">
     <nav>
       <a href="#" class="link-btn"><div>Github</div></a>
-      <a href="contact.html" class="link-btn"><div>Contact & Live Chat</div></a>
+      <a href="contact.html" class="link-btn"><div>Contact & Review</div></a>
     </nav>
 
     <div class="auth-menu">
@@ -109,7 +107,7 @@ function fill_table(month, month_length, indexMonth) {
         <button class="logout-btn auth-btn" id="logoutBtn">Logout</button>
         <div id="discordForm">
         <form onsubmit="sendContact(event)">
-          <label for="link-input">Cere adaugarea unei olimpiade sau concurs prin adaugarea datei si linkului spre olimpiada in aceste casute</label>
+          <label for="link-input">Solicită adăugarea unei olimpiade sau a unui concurs completând câmpurile cu data și linkul către olimpiadă.</label>
           <input type="text" class="form-control" id="link-input" placeholder="Link" required>
           <textarea class="form-control" id="messageInput" rows="3" placeholder="data evenimentului 2025-12-31" required></textarea>
           <button type="submit" class="btn btn-primary submit-btn">Submit</button>
@@ -132,18 +130,18 @@ function fill_table(month, month_length, indexMonth) {
     <div class="c-month">
         <span id="prev" class="prev fa fa-angle-left" aria-hidden="true"></span>
         <div id="c-paginator">
-          <span class="c-paginator__month">JANUARY</span>
-          <span class="c-paginator__month">FEBRUARY</span>
-          <span class="c-paginator__month">MARCH</span>
-          <span class="c-paginator__month">APRIL</span>
-          <span class="c-paginator__month">MAY</span>
-          <span class="c-paginator__month">JUNE</span>
-          <span class="c-paginator__month">JULY</span>
-          <span class="c-paginator__month">AUGUST</span>
-          <span class="c-paginator__month">SEPTEMBER</span>
-          <span class="c-paginator__month">OCTOBER</span>
-          <span class="c-paginator__month">NOVEMBER</span>
-          <span class="c-paginator__month">DECEMBER</span>
+          <span class="c-paginator__month">Ianuarie</span>
+          <span class="c-paginator__month">Februarie</span>
+          <span class="c-paginator__month">Martie</span>
+          <span class="c-paginator__month">Aprilie</span>
+          <span class="c-paginator__month">Mai</span>
+          <span class="c-paginator__month">Iunie</span>
+          <span class="c-paginator__month">Iulie</span>
+          <span class="c-paginator__month">August</span>
+          <span class="c-paginator__month">Septembrie</span>
+          <span class="c-paginator__month">Octombrie</span>
+          <span class="c-paginator__month">Noiembrie</span>
+          <span class="c-paginator__month">Decembrie</span>
         </div>
         <span id="next" class="next fa fa-angle-right" aria-hidden="true"></span>
       </div>
@@ -168,10 +166,10 @@ function fill_table(month, month_length, indexMonth) {
     <div class="c-cal__container c-calendar__style">
       <script>
       
-      // current year
+      // anul curent
       year = 2025;
 
-      // first day of the week of the new year
+      // prima zi a saptamanii din anul nou
       today = new Date("January 1, " + year);
       start_day = today.getDay();
       fill_table("January", 31, "01");

@@ -43,9 +43,25 @@
 .txt__awesome {
   font: normal normal normal 14px/1 FontAwesome;
 }
-/* VARIABLES ================================================*/
-/* RESPONSIVE ================================================*/
+/* variabile ================================================*/
+/* ==========================================================*/
 /* ===========================================================*/
+
+:root{
+  --dark1: #404258;
+  --dark2: #474E68;
+  --dark3: #50577A;
+  --dark4: #4554a1;
+  --dark5: #4a65ec;
+  --dark6: #49517a;
+
+  --light1: #E3FDFD;
+  --light2: #CBF1F5;
+  --light3: #A6E3E9;
+  --light4: #71C9CE;
+  --light5: #68b1b5;
+  --light6: #8ac4c7;
+}
 body {
   position: relative;
   height: 100%;
@@ -64,7 +80,7 @@ body.overlay:before {
 }
 html {
   height: 100%;
-  background: #404258;
+  background: var(--dark1);
   color: #ffffff;
   font-size: 13px;
   font-family: 'Lato', sans-serif;
@@ -81,7 +97,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-/* UTILITY ===========================================================*/
+/* Utilitate ===========================================================*/
 .u-border-box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -111,13 +127,13 @@ a {
 .resetDefaultApparence::-ms-expand {
   display: none;
 }
-/* STYLE ===========================================================*/
+/* stil ===========================================================*/
 header {
   position: fixed;
   height: 80px;
   width: 100%;
   z-index: 50;
-  background: #474E68;
+  background: var(--dark2);
 }
 header > .wrapper {
   display: flex;
@@ -204,7 +220,7 @@ header > .wrapper a {
   width: 30px;
   height: 30px;
   padding: 9px 12px;
-  background-color: #474E68;
+  background-color: var(--dark2);
   cursor: pointer;
   z-index: 10;
   box-sizing: border-box;
@@ -249,7 +265,7 @@ header > .wrapper a {
   padding: 0 10px;
   line-height: 30px;
   height: 30px;
-  background-color: #474E68;
+  background-color: var(--dark2);
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 15px;
@@ -275,7 +291,7 @@ header > .wrapper a {
   flex-direction: row;
 }
 .c-calendar__style {
-  background-color: #474E68;
+  background-color: var(--dark2);
   margin: 20px;
   padding: 10px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
@@ -360,6 +376,8 @@ header > .wrapper a {
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 .c-cal__cel p {
   position: absolute;
   margin: 0;
@@ -368,7 +386,7 @@ header > .wrapper a {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: #50577A;
+  background: var(--dark3);
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -382,19 +400,19 @@ header > .wrapper a {
   padding-top: 100%;
 }
 .c-cal__cel:nth-child(7) p {
-  background: #4554a1;
+  background: var(--dark4);
 }
 .c-cal__cel:nth-child(6) p {
-  background: #4554a1;
+  background: var(--dark4);
 }
 .c-cal__cel:hover p {
-  background: #4a65ec !important;
+  background: var(--dark5) !important;
 }
 .c-cal__cel.isSelected {
-  background-color: #50577A;
+  background-color: var(--dark3);
 }
 .c-cal__cel.isSelected p {
-  background: #49517a;
+  background: var(--dark6);
 }
 .c-cal__cel.isToday {
   background-color: rgba(245, 113, 112, 0.2);
@@ -621,7 +639,7 @@ input {
   position: fixed;
   width: 20vw;
   height: 95dvh;
-  background: #424860;
+  background: var(--dark3);
   border-radius: 4px;
   padding: 10px;
   padding-top: 50px;
@@ -646,7 +664,7 @@ input {
   width: 100%;
   padding: 8px 16px;
   margin: 4px 0;
-  background: #f0f0f0;
+  background: var(--dark2);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -664,7 +682,7 @@ input {
 }
 
 .auth-content {
-  background: white;
+  background: var(--dark2);
   padding: 30px;
   width: 400px;
   position: relative;
@@ -709,13 +727,13 @@ input {
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #404258;
+	background-color: var(--dark1);
 }
 
 ::-webkit-scrollbar
 {
 	width: 12px;
-	background-color: #404258;
+	background-color: var(--dark1);
 }
 
 ::-webkit-scrollbar-thumb
@@ -727,7 +745,7 @@ input {
 
 nav { 
   display: flex;
-  gap: 20px; /* Adds space between links */
+  gap: 20px;
   justify-content: flex-start;
   margin: 0; 
   padding: 0; 
@@ -768,4 +786,31 @@ nav {
   border-radius: 25%;
   -webkit-border-radius: 25%;
   width: 100px;
+}
+
+.theme-btn {
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--light1);
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: var(--dark3);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.hidden {
+  display: none;
 }
